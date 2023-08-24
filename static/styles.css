@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* header */
+.header-img {
+    position: relative;
+    height: 400px;
+    /* background-image: url('../img/hero-money.jpg'); */
+    background-image: url('https://cdn.pixabay.com/photo/2023/03/28/01/10/money-7881948_1280.jpg');
+    background-size: cover;
+    background-position: 0 70%;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-text h1 {
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(23, 33, 25, 0.4);
+}
+
+/* navigation */
+.nav {
+    height: 50px;
+    background-color: #333;
+    text-align: center;
+    line-height: 50px;
+    font-size: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item a {
+    padding: 0 50px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: color .2s;
+}
+
+.nav-item a:hover {
+    color: rgb(153, 191, 158);
+}
+
+/* main */
+main {
+    width: 1200px;
+    margin: 100px auto;
+}
+
+.page-header {
+    text-align: center;
+    margin: 40px auto 10px auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* form */
+form {
+    margin: 40px auto 50px auto;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form-btn {
+    display: block;
+    margin: 10px auto 0px auto;
+    padding: 10px 20px;
+    /* background-color: rgb(132, 161, 136); */
+    background-color: rgb(153, 191, 158);
+    box-shadow: 0 0 3px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 300ms;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form-btn:hover {
+    background-color: rgb(155, 176, 157);
+    box-shadow: 0 0 5px rgb(132, 161, 136);
+
+}
+
+/* footer */
+footer {
+    margin-top: 30px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+/* transactions-table */
+.transactions-table {
+    margin: 0px auto;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.transactions-table thead {
+    line-height: 40px;
+}
+
+.transactions-table td {
+    padding: 10px 30px;
+}
+
+.transactions-table thead, td {
+    border: 1px solid #ccc;
+}
+
+
+/* total values */
+.total {
+    margin: 40px auto 50px auto;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.total-value {
+    font-weight: bold;
+}
+
+.green {
+    color: rgb(34, 139, 34)
+}
+
+.red {
+    color: rgb(210, 43, 43)
+}
+
+
+/* form date */
+.form-container-date {
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.form-container-date form {
+    margin: 40px auto;
+}
+
+.form-header-date {
+    margin: 5px auto;
+    font-size: 16px;
+}
+
+.form-item-date {
+    margin: 10px 10px 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px
+}
+
+.form-item-date input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-btn-date {
+    margin-top: 10px;
+}
+
+.date-range {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+
+    .nav {
+        height: 100%;
+    }
+
+    .page-header {
+        width: 90%;
+    }
+
+    .transactions-table {
+        margin: 0 auto;
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .transactions-table td {
+        padding: 5px 15px;
+    }
+
+    .form-label {
+        text-align: center;
+    }
+
+    .form-container-date {
+        margin: 30px 0;
+        padding: 0 35px;
+    }
+
+    .form-container-date form {
+        margin: 20px auto;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .form-header-date {
+        margin-bottom: 10px;
+    }
+
+    .form-item-date {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    form {
+        margin: 20px auto;
+        padding: 30px 20px;
+        width: 85%;
+    }
+}

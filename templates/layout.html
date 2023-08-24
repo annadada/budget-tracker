@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Personal Budget {% block title %}{% endblock %}</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Noto+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/683eb3ecdc.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="header-img">
+                <div class="header-text">
+                    <h1>Personal Budget Tracker</h1>
+                    <p>Keep track of your finances</p>
+                </div>
+                <div class="header-bg"></div>
+            </div>
+        </header>
+
+        {% if session["user_id"] %}
+
+            <nav class="nav">
+                <ul>
+                    <li class="nav-item"><a href="/">Add new transaction</a></li>
+                    <li class="nav-item"><a href="/expenses">Expenses</a></li>
+                    <li class="nav-item"><a href="/incomes">Incomes</a></li>
+                    <li class="nav-item"><a href="/all_transactions">All transactions</a></li>
+                    <li class="nav-item"><a href="/logout">Log Out</a></li>
+                </ul>
+            </nav>
+
+        {% else %}
+            <nav class="nav">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                </ul>
+            </nav>
+        {% endif %}
+
+        {% block body %}{% endblock %}
+
+    </body>
+
+    <footer>
+        <p>&copy; 2023 Wrought and designed by Anna Dąda</p>
+    </footer>
+
+</html>

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    {% if expenses %}
+
+        <div class="form-container-date">
+            <form method="get" action="/expenses">
+                <h3 class="form-header-date">Show expenses for a selected period</h3>
+                <div class="form-item-date">
+                    <label class="form-label" for="start_date">Start Date:</label>
+                    <input class="form-item-date" type="date" id="start_date" name="start_date" required>
+                </div>
+                <div class="form-item-date">
+                    <label class="form-label" for="end_date">End Date:</label>
+                    <input class="form-item-date" type="date" id="end_date" name="end_date" required>
+                </div>
+                <button class="form-btn" type="submit">Show Expenses</button>
+            </form>
+        </div>
+
+        <h3 class="page-header">
+            {% if start_date and end_date %}
+                {% if end_date < start_date %}
+                    Invalid date range. The end date must come after the start date.
+                {% else %}
+                    {% if expenses %}
+                        Your expenses in a selected period
+                    {% else %}
+                        No data available for this period.
+                    {% endif %}
+                {% endif %}
+            {% else %}
+                Your Expenses
+            {% endif %}
+        </h3>
+
+        {% if start_date and end_date %}
+        <p class="date-range">
+            (Chosen date range: from {{ start_date }} to {{ end_date }})
+        </p>
+        {% endif %}
+
+        <table class="transactions-table">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in expenses %}
+                <tr>
+                    <td>{{ '{:.2f}'.format(transaction[1]) }}</td>
+                    <td>{{ transaction[2] }}</td>
+                    <td>{{ transaction[3].split()[0] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="total">
+            Total Expenses Amount: <span class="total-value">{{ '{:.2f}'.format(total_expenses) }}</span> USD
+        </p>
+
+    {% else %}
+        <h3 class="page-header">No data is available. Complete the form to add a transaction.</h3>
+    {% endif %}
+
+{% endblock %}
