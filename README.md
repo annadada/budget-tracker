@@ -1,7 +1,7 @@
 # Personal Budget Tracker Web App
 ## To keep track of your finances
 
-#### *Video presenting the functionality*: <URL>
+#### *Video presenting the functionality*: [<URL>](https://youtu.be/2vcUFBkO9G0)
 
 ***
 
