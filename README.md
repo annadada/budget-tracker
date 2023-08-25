@@ -54,3 +54,12 @@
 5. **View Account Balance**: At the end of the table in "All transactions" there is your "Current balance". It is the sum of all incomes subtracted from the sum of all expenses and is updated with each transaction you enter. The balance is recalculated according to the selected date range. The Expenses and Incomes subpages are built similarly, except that in expenses you will find only expenses and their sum, and in incomes only incomes and their sum. Here you can also observe your transactions in the selected date range. You can also use a date range here.
 
 6. **Log Out**: Safely log out of your account when you're done. If you have successfully logged out, the following message will be displayed: "Logged out successfully!"
+
+
+### *Running the Application:*
+
+1. Download the repository to your computer.
+2. Ensure that you have Python and all necessary libraries installed on your computer.
+3. Navigate to the project directory, for example, by using the following command: `cd budget-tracker`
+4. To start the application, type the following command in your terminal: `flask run`
+5. The application will be accessible at http://localhost:5000 (or another address displayed in the console).
