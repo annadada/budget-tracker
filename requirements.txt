@@ -24,6 +24,7 @@ fastjsonschema==2.16.3
 Flask==2.2.3
 fonttools==4.39.0
 fqdn==1.5.1
+gunicorn==21.2.0
 idna==3.4
 iniconfig==2.0.0
 ipykernel==6.22.0
@@ -80,7 +81,7 @@ pytest==7.2.1
 python-dateutil==2.8.2
 python-json-logger==2.0.7
 pytz==2022.7.1
-pywinpty==2.0.10
+pywin32==306
 PyYAML==6.0
 pyzmq==25.0.2
 qtconsole==5.4.2
