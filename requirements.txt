@@ -107,5 +107,3 @@ websocket-client==1.5.1
 Werkzeug==2.2.3
 widgetsnbextension==4.0.7
 XlsxWriter==3.0.9
-[dev]
-pywin32==306
